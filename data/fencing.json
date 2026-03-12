@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Wood Picket Fence",
+        "material":"Wood",
+        "purpose": "Decorative boundary",
+        "height": "3-4 ft",
+        "bestUse": "Flower gardens and decorative borders",
+        "maintenance": "Requires periodic painting or sealing"
+    },
+    {
+        "name": "Wire Garden Fence",
+        "material": "Steel wire",
+        "purpose": "Animal protection",
+        "height": "3-5 ft",
+    "bestUse": "Vegetable gardens to prevent rabbits or small animals",
+    "maintenance": "Minimal maintenance required"
+  },
+  {
+    "name": "Split Rail Fence",
+    "material": "Wood",
+    "purpose": "Garden boundary",
+    "height": "3-4 ft",
+    "bestUse": "Large gardens and rustic landscapes",
+    "maintenance": "Occasional wood treatment recommended"
+  },
+  {
+    "name": "Vinyl Fence",
+    "material": "PVC Vinyl",
+    "purpose": "Decorative and privacy",
+    "height": "4-6 ft",
+    "bestUse": "Backyard gardens and landscaped yards",
+    "maintenance": "Very low maintenance"
+  },
+  {
+    "name": "Metal Decorative Fence",
+    "material": "Wrought iron or aluminum",
+    "purpose": "Decorative and security",
+    "height": "3-6 ft",
+    "bestUse": "Formal gardens and landscaped areas",
+    "maintenance": "Occasional rust prevention treatment"
+  },
+  {
+    "name": "Garden Trellis Fence",
+    "material": "Wood or metal",
+    "purpose": "Plant support",
+    "height": "5-6 ft",
+    "bestUse": "Climbing plants such as roses or beans",
+    "maintenance": "Inspect annually for structural stability"
+  },
+  {
+    "name": "Bamboo Fence",
+    "material": "Bamboo",
+    "purpose": "Decorative natural barrier",
+    "height": "4-6 ft",
+    "bestUse": "Zen gardens and decorative spaces",
+    "maintenance": "Replace damaged bamboo sections as needed"
+  },
+  {
+    "name": "Plastic Garden Border",
+    "material": "Plastic",
+    "purpose": "Garden bed edge",
+    "height": "6-12 inches",
+    "bestUse": "Separating garden beds from lawns",
+    "maintenance": "Minimal maintenance required"
+  }
+]
