@@ -1,21 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garden Design Planner</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Garden Design Planner</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
 
-  <header>
-    <h1>Garden Design Planner</h1>
-  </header>
+<header>
 
-  <main>
-    <p>Welcome to the Garden Design Planner.</p>
-  </main>
+<h1>Garden Design Planner</h1>
 
-  <script type="module" src="js/main.js"></script>
+<nav>
+
+<ul class="nav-menu">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Food Garden</a></li>
+
+<li><a href="#">Flowers & Landscape</a></li>
+
+<li><a href="#">Fencing</a></li>
+
+<li><a href="#">My Garden Plan</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="intro">
+
+<h2>Welcome</h2>
+
+<p>
+This tool helps design better gardens by showing which plants grow well together,
+which plants should be separated, and how to properly care for each type of plant.
+</p>
+
+</section>
+
+
+<section class="features">
+
+<div class="card">
+
+<h3>Food Garden Designer</h3>
+
+<p>
+Select vegetables, fruits, and herbs to see recommended companion plants and
+plants that should not be placed nearby.
+</p>
+
+<button id="foodSectionBtn">Explore Food Plants</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Flower & Garden Design</h3>
+
+<p>
+Explore flowers, annuals, perennials, and landscape ideas to design beautiful
+garden spaces with proper care instructions.
+</p>
+
+<button id="flowerSectionBtn">Explore Flowers</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Garden Fencing</h3>
+
+<p>
+Learn about fencing types that protect and enhance garden layouts including
+wood, metal, decorative, and functional barriers.
+</p>
+
+<button id="fenceSectionBtn">Explore Fencing</button>
+
+</div>
+
+</section>
+
+
+<section class="garden-plan">
+
+<h2>My Garden Plan</h2>
+
+<p>
+Saved plants and measurements for your garden layout will appear here.
+</p>
+
+<div id="gardenContainer">
+
+<p>No plants saved yet.</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>Garden Design Planner — WDD330 Final Project</p>
+
+</footer>
+
+
+<script type="module" src="js/main.js"></script>
+
 </body>
+
 </html>
