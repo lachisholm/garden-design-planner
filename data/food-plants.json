@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Tomato",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "goodCompanions": ["Basil", "Carrot", "Onion"],
+    "avoid": ["Potato", "Corn"]
+  },
+  {
+    "name": "Basil",
+    "water": "Low",
+    "sun": "Full Sun",
+    "goodCompanions": ["Tomato", "Pepper"],
+    "avoid": []
+  },
+  {
+    "name": "Carrot",
+    "water": "Low",
+    "sun": "Full Sun",
+    "goodCompanions": ["Tomato", "Lettuce"],
+    "avoid": ["Dill"]
+  },
+  {
+    "name": "Pepper",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "goodCompanions": ["Basil", "Tomato"],
+    "avoid": ["Fennel"]
+  },
+  {
+    "name": "Watermelon",
+    "water": "High",
+    "sun": "Full Sun",
+    "goodCompanions": ["Radish", "Corn"],
+    "avoid": ["Potato"]
+  }
+]
