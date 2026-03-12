@@ -1,6 +1,7 @@
 // =================================================
 // PLANT DATA MODULE
 // Responsible for loading plant data from local JSON files
+// loads plant data
 // =================================================
 
 

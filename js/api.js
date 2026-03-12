@@ -1,6 +1,6 @@
 // =================================================
 // API COMMUNICATION MODULE
-// Responsible for retrieving plant data from external APIs
+// Responsible for retrieving plant data from external APIs - talks to external plant data services
 // =================================================
 
 

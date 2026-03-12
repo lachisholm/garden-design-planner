@@ -1,3 +1,12 @@
+//=============================================
+// MAIN JAVASCRIPT FILE - this file is responsible for handling user interactions, displaying saved garden plans, and connecting the design and API modules together
+// Controls page interactions and starting the application
+//==============================================
+
+
+
+
+
 // Writes a message to the browser console confirming the script loaded
 console.log("Garden Design Planner Loaded");
 

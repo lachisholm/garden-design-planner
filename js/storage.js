@@ -1,6 +1,7 @@
 // =================================================
 // LOCAL STORAGE MODULE
 // Handles saving, retrieving, and clearing garden data
+// saves garden plans to the browser
 // =================================================
 
 
