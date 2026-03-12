@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Rose",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Lavender", "Marigold"],
+    "avoid": ["Mint"]
+  },
+  {
+    "name": "Lavender",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Rose", "Daisy"],
+    "avoid": []
+  },
+  {
+    "name": "Marigold",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "type": "Annual",
+    "goodCompanions": ["Rose", "Petunia"],
+    "avoid": []
+  },
+  {
+    "name": "Tulip",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Daffodil"],
+    "avoid": []
+  },
+  {
+    "name": "Daffodil",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Tulip"],
+    "avoid": []
+  },
+  {
+    "name": "Daisy",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Lavender", "Coneflower"],
+    "avoid": []
+  },
+  {
+    "name": "Petunia",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "type": "Annual",
+    "goodCompanions": ["Marigold", "Geranium"],
+    "avoid": []
+  },
+  {
+    "name": "Geranium",
+    "water": "Medium",
+    "sun": "Partial Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Petunia"],
+    "avoid": []
+  },
+  {
+    "name": "Sunflower",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "type": "Annual",
+    "goodCompanions": ["Zinnia", "Cosmos"],
+    "avoid": []
+  },
+  {
+    "name": "Zinnia",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Annual",
+    "goodCompanions": ["Sunflower"],
+    "avoid": []
+  },
+  {
+    "name": "Cosmos",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Annual",
+    "goodCompanions": ["Sunflower"],
+    "avoid": []
+  },
+  {
+    "name": "Coneflower",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Daisy"],
+    "avoid": []
+  },
+  {
+    "name": "Hydrangea",
+    "water": "High",
+    "sun": "Partial Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Hosta"],
+    "avoid": []
+  },
+  {
+    "name": "Hosta",
+    "water": "Medium",
+    "sun": "Shade",
+    "type": "Perennial",
+    "goodCompanions": ["Hydrangea"],
+    "avoid": []
+  },
+  {
+    "name": "Begonia",
+    "water": "Medium",
+    "sun": "Partial Sun",
+    "type": "Annual",
+    "goodCompanions": ["Impatiens"],
+    "avoid": []
+  },
+  {
+    "name": "Impatiens",
+    "water": "Medium",
+    "sun": "Shade",
+    "type": "Annual",
+    "goodCompanions": ["Begonia"],
+    "avoid": []
+  },
+  {
+    "name": "Chrysanthemum",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Aster"],
+    "avoid": []
+  },
+  {
+    "name": "Aster",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Chrysanthemum"],
+    "avoid": []
+  },
+  {
+    "name": "Peony",
+    "water": "Medium",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Iris"],
+    "avoid": []
+  },
+  {
+    "name": "Iris",
+    "water": "Low",
+    "sun": "Full Sun",
+    "type": "Perennial",
+    "goodCompanions": ["Peony"],
+    "avoid": []
+  }
+]
