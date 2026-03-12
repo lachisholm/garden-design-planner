@@ -1,0 +1,149 @@
+<!-- Declares the document type so browsers render using modern HTML -->
+<!DOCTYPE html>
+
+<!-- Root element for the HTML document -->
+<html lang="en">
+
+<!-- Head section containing metadata and resource links -->
+<head>
+
+<!-- Defines the character encoding -->
+<meta charset="UTF-8">
+
+<!-- Enables responsive layout on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title displayed in the browser tab -->
+<title>Flower Garden Planner</title>
+
+<!-- Connects the shared stylesheet for the entire site -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- End of head section -->
+</head>
+
+<!-- Beginning of the visible page -->
+<body>
+
+<!-- Site header containing title and navigation -->
+<header>
+
+<!-- Main application title -->
+<h1>Garden Design Planner</h1>
+
+<!-- Navigation menu allowing movement between pages -->
+<nav>
+
+<!-- Unordered list used to structure navigation links -->
+<ul class="nav-menu">
+
+<!-- Link to homepage -->
+<li><a href="index.html">Home</a></li>
+
+<!-- Link to food garden page -->
+<li><a href="food.html">Food Garden</a></li>
+
+<!-- Link to flower garden page -->
+<li><a href="flowers.html">Flowers</a></li>
+
+<!-- Link to fencing information page -->
+<li><a href="fencing.html">Fencing</a></li>
+
+<!-- Link to garden planner page -->
+<li><a href="planner.html">My Garden Plan</a></li>
+
+<!-- End navigation list -->
+</ul>
+
+<!-- End navigation -->
+</nav>
+
+<!-- End header -->
+</header>
+
+
+<!-- Main page content area -->
+<main>
+
+<!-- Intro section explaining purpose of page -->
+<section class="intro">
+
+<!-- Section title -->
+<h2>Flower and Landscape Design</h2>
+
+<!-- Description of how this page helps users -->
+<p>
+This section helps users design flower gardens and decorative landscapes.
+Information will include annual flowers, perennial flowers, companion planting
+for beauty and health, watering requirements, and garden layout ideas.
+</p>
+
+<!-- End intro section -->
+</section>
+
+
+<!-- Section where flower data will be displayed -->
+<section class="features">
+
+<!-- Heading for flower list -->
+<h2>Available Garden Flowers</h2>
+
+<!-- Container where flower cards will be inserted by JavaScript -->
+<div id="flowerContainer">
+
+<!-- Temporary placeholder text before data loads -->
+<p>Loading flower data...</p>
+
+<!-- End container -->
+</div>
+
+<!-- End feature section -->
+</section>
+
+
+<!-- Section for flower care tips -->
+<section class="garden-plan">
+
+<!-- Section title -->
+<h2>Flower Care and Garden Tips</h2>
+
+<!-- Container for dynamic flower advice -->
+<div id="flowerTips">
+
+<!-- Placeholder message -->
+<p>Select a flower to view care instructions.</p>
+
+<!-- End container -->
+</div>
+
+<!-- End tips section -->
+</section>
+
+<!-- End main content -->
+</main>
+
+
+<!-- Footer containing project information -->
+<footer>
+
+<!-- Simple footer text -->
+<p>Garden Design Planner — WDD330 Final Project</p>
+
+<!-- End footer -->
+</footer>
+
+
+<!-- Loads the plant dataset module -->
+<script type="module" src="js/plants.js"></script>
+
+<!-- Loads compatibility logic for garden design -->
+<script type="module" src="js/design.js"></script>
+
+<!-- Loads UI rendering logic -->
+<script type="module" src="js/ui.js"></script>
+
+<!-- End body -->
+</body>
+
+<!-- End HTML document -->
+</html>
