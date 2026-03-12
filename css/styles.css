@@ -1,0 +1,142 @@
+/* ---------- Reset ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ---------- Base ---------- */
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f8f9fb;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+  background: #1f2937; /* dark slate */
+  color: #ffffff;
+  padding: 22px;
+  text-align: center;
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav {
+  margin-top: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------- Layout ---------- */
+
+main {
+  padding: 32px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+/* ---------- Intro Section ---------- */
+
+.intro {
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+
+/* ---------- Feature Cards ---------- */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-bottom: 45px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.card p {
+  margin-bottom: 18px;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.card button {
+  background: #2563eb; /* accessible blue */
+  color: #ffffff;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ---------- Garden Plan ---------- */
+
+.garden-plan {
+  margin-top: 35px;
+}
+
+#gardenContainer {
+  margin-top: 12px;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 8px;
+  min-height: 90px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #e5e7eb;
+  font-size: 14px;
+}
