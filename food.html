@@ -1,0 +1,123 @@
+<!-- Declares the document type so browsers use modern HTML standards -->
+<!DOCTYPE html>
+
+<!-- Root HTML element -->
+<html lang="en">
+
+<!-- Head section containing metadata and resources -->
+<head>
+
+<!-- Defines character encoding -->
+<meta charset="UTF-8">
+
+<!-- Enables responsive layout on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title shown in the browser tab -->
+<title>Food Garden Planner</title>
+
+<!-- Links the shared stylesheet -->
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<!-- Visible page content begins -->
+<body>
+
+<!-- Header containing site title and navigation -->
+<header>
+
+<!-- Main title of the application -->
+<h1>Garden Design Planner</h1>
+
+<!-- Navigation menu -->
+<nav>
+
+<!-- List used for navigation links -->
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="food.html">Food Garden</a></li>
+
+<li><a href="flowers.html">Flowers</a></li>
+
+<li><a href="fencing.html">Fencing</a></li>
+
+<li><a href="planner.html">My Garden Plan</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- Main page content -->
+<main>
+
+<!-- Introduction section -->
+<section class="intro">
+
+<h2>Food Garden Companion Planner</h2>
+
+<p>
+This section helps gardeners choose vegetables, fruits, and herbs that grow well together.
+The planner identifies companion plants that improve growth and warns when plants should
+not be placed near each other.
+</p>
+
+</section>
+
+
+<!-- Section where plant cards will appear -->
+<section class="features">
+
+<h2>Available Food Plants</h2>
+
+<!-- Container where plant cards will be inserted -->
+<div id="foodPlantContainer">
+
+<p>Loading plant data...</p>
+
+</div>
+
+</section>
+
+
+<!-- Section where compatibility results will appear -->
+<section class="garden-plan">
+
+<h2>Companion Plant Results</h2>
+
+<div id="compatibilityResults">
+
+<p>Select plants to evaluate compatibility.</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+
+<p>Garden Design Planner — WDD330 Final Project</p>
+
+</footer>
+
+
+<!-- Loads plant dataset module -->
+<script type="module" src="js/plants.js"></script>
+
+<!-- Loads garden compatibility logic -->
+<script type="module" src="js/design.js"></script>
+
+<!-- Loads UI rendering logic -->
+<script type="module" src="js/ui.js"></script>
+
+</body>
+
+</html>
