@@ -1,67 +1,103 @@
+// Writes a message to the browser console confirming the script loaded
 console.log("Garden Design Planner Loaded");
 
 
-/* ---------- Section Buttons ---------- */
-
+// Gets the Food Garden button from the HTML page by its ID so JavaScript can interact with it
 const foodBtn = document.getElementById("foodSectionBtn");
+
+// Gets the Flower Garden button from the HTML page by its ID
 const flowerBtn = document.getElementById("flowerSectionBtn");
+
+// Gets the Fencing button from the HTML page by its ID
 const fenceBtn = document.getElementById("fenceSectionBtn");
 
 
-/* ---------- Navigation Handlers ---------- */
-
+// Checks if the Food Garden button exists before attaching an event listener
 if (foodBtn) {
-  foodBtn.addEventListener("click", () => {
-    alert("Food Garden section coming next.");
-  });
+
+    // Listens for a click event on the Food Garden button
+    foodBtn.addEventListener("click", () => {
+
+        // Displays a simple message to the user when the button is clicked
+        alert("Food Garden section coming next.");
+
+    });
+
 }
 
+
+// Checks if the Flower Garden button exists before attaching interaction logic
 if (flowerBtn) {
-  flowerBtn.addEventListener("click", () => {
-    alert("Flower Garden section coming next.");
-  });
+
+    // Listens for click events on the Flower button
+    flowerBtn.addEventListener("click", () => {
+
+        // Shows a message to the user indicating the feature will be added soon
+        alert("Flower Garden section coming next.");
+
+    });
+
 }
 
+
+// Checks if the Fencing button exists before attaching logic
 if (fenceBtn) {
-  fenceBtn.addEventListener("click", () => {
-    alert("Fencing section coming next.");
-  });
+
+    // Listens for click events on the Fencing button
+    fenceBtn.addEventListener("click", () => {
+
+        // Displays a temporary placeholder message
+        alert("Fencing section coming next.");
+
+    });
+
 }
 
 
-/* ---------- Garden Container ---------- */
-
+// Retrieves the container element where saved garden plants will be displayed
 const gardenContainer = document.getElementById("gardenContainer");
 
 
+// Defines a function responsible for displaying saved garden items from localStorage
 function displaySavedGarden() {
 
-  const savedGarden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
+    // Retrieves the saved garden plan from browser localStorage and converts it from JSON text into an object
+    const savedGarden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
 
-  if (savedGarden.length === 0) {
-    gardenContainer.innerHTML = "<p>No plants saved yet.</p>";
-    return;
-  }
+    // Checks whether the saved garden list is empty
+    if (savedGarden.length === 0) {
 
-  gardenContainer.innerHTML = "";
+        // Updates the HTML container to show a message if no plants are saved
+        gardenContainer.innerHTML = "<p>No plants saved yet.</p>";
 
-  savedGarden.forEach(plant => {
+        // Stops the function since there is nothing to display
+        return;
 
-    const plantCard = document.createElement("div");
+    }
 
-    plantCard.innerHTML = `
-      <strong>${plant.name}</strong>
-      <p>Water: ${plant.water}</p>
-      <p>Sun: ${plant.sun}</p>
-    `;
+    // Clears any existing content from the container before displaying items
+    gardenContainer.innerHTML = "";
 
-    gardenContainer.appendChild(plantCard);
+    // Loops through each plant stored in the saved garden array
+    savedGarden.forEach(plant => {
 
-  });
+        // Creates a new HTML div element that will hold plant information
+        const plantCard = document.createElement("div");
+
+        // Inserts plant data into the div using template literals
+        plantCard.innerHTML = `
+        <strong>${plant.name}</strong>
+        <p>Water: ${plant.water}</p>
+        <p>Sun: ${plant.sun}</p>
+        `;
+
+        // Appends the newly created plant card to the garden container on the page
+        gardenContainer.appendChild(plantCard);
+
+    });
 
 }
 
 
-/* ---------- Initialize App ---------- */
-
+// Calls the function that loads and displays any saved garden data when the page first loads
 displaySavedGarden();
