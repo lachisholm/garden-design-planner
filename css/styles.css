@@ -1,142 +1,323 @@
-/* ---------- Reset ---------- */
+/* ================================================= */
+/* GLOBAL RESET                                      */
+/* ================================================= */
 
+/* Applies rules to every element */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/* Removes default browser margin */
+margin: 0;
+
+/* Removes default browser padding */
+padding: 0;
+
+/* Keeps layout sizing predictable */
+box-sizing: border-box;
+
 }
 
 
-/* ---------- Base ---------- */
+/* ================================================= */
+/* BODY / GLOBAL TEXT                                */
+/* ================================================= */
 
+/* Styles the main body of the page */
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #f8f9fb;
-  color: #1a1a1a;
-  line-height: 1.6;
+
+/* Sets the font used across the application */
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+/* Sets a neutral background color */
+background: #f8f9fb;
+
+/* Sets default text color */
+color: #1a1a1a;
+
+/* Improves readability */
+line-height: 1.6;
+
 }
 
 
-/* ---------- Header ---------- */
+/* ================================================= */
+/* HEADER                                            */
+/* ================================================= */
 
+/* Styles the header area */
 header {
-  background: #1f2937; /* dark slate */
-  color: #ffffff;
-  padding: 22px;
-  text-align: center;
+
+/* Dark background for contrast */
+background: #1f2937;
+
+/* Header text color */
+color: #ffffff;
+
+/* Adds internal spacing */
+padding: 22px;
+
+/* Centers header text */
+text-align: center;
+
 }
 
 
-/* ---------- Navigation ---------- */
+/* ================================================= */
+/* NAV BAR                                           */
+/* ================================================= */
 
+/* Styles the navigation container */
 nav {
-  margin-top: 10px;
+
+/* Adds spacing above nav */
+margin-top: 10px;
+
 }
 
+
+/* Styles the navigation menu list */
 .nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 26px;
+
+/* Removes bullet points */
+list-style: none;
+
+/* Places items horizontally */
+display: flex;
+
+/* Centers the navigation items */
+justify-content: center;
+
+/* Adds spacing between items */
+gap: 26px;
+
 }
 
+
+/* Styles navigation links */
 .nav-menu a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
+
+/* Removes underline */
+text-decoration: none;
+
+/* Link color */
+color: #ffffff;
+
+/* Slightly bold text */
+font-weight: 600;
+
 }
 
+
+/* Adds hover effect to nav links */
 .nav-menu a:hover {
-  text-decoration: underline;
+
+/* Underline appears on hover */
+text-decoration: underline;
+
 }
 
 
-/* ---------- Layout ---------- */
+/* ================================================= */
+/* MAIN PAGE LAYOUT                                  */
+/* ================================================= */
 
+/* Styles the main content container */
 main {
-  padding: 32px;
-  max-width: 1100px;
-  margin: auto;
+
+/* Adds internal spacing */
+padding: 32px;
+
+/* Limits page width */
+max-width: 1100px;
+
+/* Centers the content */
+margin: auto;
+
 }
 
 
-/* ---------- Intro Section ---------- */
+/* ================================================= */
+/* INTRO SECTION                                     */
+/* ================================================= */
 
+/* Styles the introduction section */
 .intro {
-  margin-bottom: 40px;
+
+/* Adds space below intro */
+margin-bottom: 40px;
+
 }
 
+
+/* Styles intro heading */
 .intro h2 {
-  margin-bottom: 10px;
-  font-size: 28px;
+
+/* Adds spacing below heading */
+margin-bottom: 10px;
+
+/* Larger heading size */
+font-size: 28px;
+
 }
 
 
-/* ---------- Feature Cards ---------- */
+/* ================================================= */
+/* FEATURE CARDS                                     */
+/* ================================================= */
 
+/* Styles the card grid container */
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin-bottom: 45px;
+
+/* Uses responsive grid layout */
+display: grid;
+
+/* Creates responsive columns */
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+/* Spacing between cards */
+gap: 28px;
+
+/* Space below card section */
+margin-bottom: 45px;
+
 }
 
+
+/* Styles individual cards */
 .card {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+
+/* Card background */
+background: #ffffff;
+
+/* Rounded corners */
+border-radius: 10px;
+
+/* Internal spacing */
+padding: 24px;
+
+/* Subtle shadow */
+box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+
 }
 
+
+/* Styles card titles */
 .card h3 {
-  margin-bottom: 12px;
-  font-size: 20px;
+
+/* Spacing below title */
+margin-bottom: 12px;
+
+/* Title font size */
+font-size: 20px;
+
 }
 
+
+/* Styles card paragraph text */
 .card p {
-  margin-bottom: 18px;
+
+/* Adds space below text */
+margin-bottom: 18px;
+
 }
 
 
-/* ---------- Buttons ---------- */
+/* ================================================= */
+/* BUTTONS                                           */
+/* ================================================= */
 
+/* Styles buttons inside cards */
 .card button {
-  background: #2563eb; /* accessible blue */
-  color: #ffffff;
-  border: none;
-  padding: 11px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
+
+/* Accessible blue button color */
+background: #2563eb;
+
+/* Button text color */
+color: #ffffff;
+
+/* Removes border */
+border: none;
+
+/* Adds internal spacing */
+padding: 11px 16px;
+
+/* Rounded button corners */
+border-radius: 6px;
+
+/* Bold button text */
+font-weight: 600;
+
+/* Cursor pointer on hover */
+cursor: pointer;
+
 }
 
+
+/* Button hover styling */
 .card button:hover {
-  background: #1d4ed8;
+
+/* Slightly darker hover color */
+background: #1d4ed8;
+
 }
 
 
-/* ---------- Garden Plan ---------- */
+/* ================================================= */
+/* GARDEN PLAN SECTION                               */
+/* ================================================= */
 
+/* Styles the saved garden section */
 .garden-plan {
-  margin-top: 35px;
+
+/* Adds spacing above section */
+margin-top: 35px;
+
 }
 
+
+/* Styles the container where plants appear */
 #gardenContainer {
-  margin-top: 12px;
-  padding: 22px;
-  background: #ffffff;
-  border-radius: 8px;
-  min-height: 90px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+/* Adds spacing above container */
+margin-top: 12px;
+
+/* Adds padding inside container */
+padding: 22px;
+
+/* Background color */
+background: #ffffff;
+
+/* Rounded corners */
+border-radius: 8px;
+
+/* Ensures visible container height */
+min-height: 90px;
+
+/* Soft shadow */
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
 }
 
 
-/* ---------- Footer ---------- */
+/* ================================================= */
+/* FOOTER                                            */
+/* ================================================= */
 
+/* Styles footer area */
 footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: #e5e7eb;
-  font-size: 14px;
+
+/* Centers footer text */
+text-align: center;
+
+/* Adds spacing above footer */
+margin-top: 40px;
+
+/* Internal footer padding */
+padding: 20px;
+
+/* Footer background */
+background: #e5e7eb;
+
+/* Smaller text */
+font-size: 14px;
+
 }

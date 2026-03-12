@@ -1,130 +1,190 @@
+<!-- Declares the document type so the browser renders the page using modern HTML standards -->
 <!DOCTYPE html>
+
+<!-- Starts the HTML document and declares the language for accessibility and search engines -->
 <html lang="en">
+
+<!-- Begins the document head section which contains metadata and resource links -->
 <head>
+
+<!-- Defines the character encoding so text displays correctly -->
 <meta charset="UTF-8">
+
+<!-- Ensures proper responsive behavior on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Sets the title displayed in the browser tab -->
 <title>Garden Design Planner</title>
 
+<!-- Links the external stylesheet that controls layout, colors, and visual design -->
 <link rel="stylesheet" href="css/styles.css">
 
+<!-- Ends the document head section -->
 </head>
 
+<!-- Begins the visible page content -->
 <body>
 
+<!-- Defines the page header which contains the site title and navigation -->
 <header>
 
+<!-- Displays the main title of the application -->
 <h1>Garden Design Planner</h1>
 
+<!-- Defines the navigation area for moving between sections of the application -->
 <nav>
 
+<!-- Creates an unordered list used for the navigation menu -->
 <ul class="nav-menu">
 
+<!-- Navigation item linking to the home view -->
 <li><a href="#">Home</a></li>
 
+<!-- Navigation item linking to the food garden planner section -->
 <li><a href="#">Food Garden</a></li>
 
+<!-- Navigation item linking to the flower and landscape section -->
 <li><a href="#">Flowers & Landscape</a></li>
 
+<!-- Navigation item linking to fencing information -->
 <li><a href="#">Fencing</a></li>
 
+<!-- Navigation item linking to the user's saved garden plan -->
 <li><a href="#">My Garden Plan</a></li>
 
+<!-- Ends the navigation list -->
 </ul>
 
+<!-- Ends the navigation container -->
 </nav>
 
+<!-- Ends the header section -->
 </header>
 
-
+<!-- Begins the main content area of the page -->
 <main>
 
+<!-- Section introducing the purpose of the application -->
 <section class="intro">
 
+<!-- Heading describing the introduction section -->
 <h2>Welcome</h2>
 
+<!-- Paragraph explaining what the application is used for -->
 <p>
 This tool helps design better gardens by showing which plants grow well together,
 which plants should be separated, and how to properly care for each type of plant.
 </p>
 
+<!-- Ends the introduction section -->
 </section>
 
 
+<!-- Section containing the main feature cards for the application -->
 <section class="features">
 
+<!-- Card describing the food garden designer tool -->
 <div class="card">
 
+<!-- Title of the food garden design feature -->
 <h3>Food Garden Designer</h3>
 
+<!-- Description explaining what the food garden section does -->
 <p>
 Select vegetables, fruits, and herbs to see recommended companion plants and
 plants that should not be placed nearby.
 </p>
 
+<!-- Button that will trigger the food garden module through JavaScript -->
 <button id="foodSectionBtn">Explore Food Plants</button>
 
+<!-- Ends the card container -->
 </div>
 
 
+<!-- Card describing the flower and landscape design section -->
 <div class="card">
 
+<!-- Title of the flower garden section -->
 <h3>Flower & Garden Design</h3>
 
+<!-- Description explaining flower and landscape planning tools -->
 <p>
 Explore flowers, annuals, perennials, and landscape ideas to design beautiful
 garden spaces with proper care instructions.
 </p>
 
+<!-- Button that will activate the flower design module -->
 <button id="flowerSectionBtn">Explore Flowers</button>
 
+<!-- Ends the card container -->
 </div>
 
 
+<!-- Card describing the fencing information section -->
 <div class="card">
 
+<!-- Title for the fencing section -->
 <h3>Garden Fencing</h3>
 
+<!-- Description explaining fencing guidance for gardens -->
 <p>
 Learn about fencing types that protect and enhance garden layouts including
 wood, metal, decorative, and functional barriers.
 </p>
 
+<!-- Button that will open the fencing section logic -->
 <button id="fenceSectionBtn">Explore Fencing</button>
 
+<!-- Ends the card container -->
 </div>
 
+<!-- Ends the features section -->
 </section>
 
 
+<!-- Section where saved garden plans will appear -->
 <section class="garden-plan">
 
+<!-- Title for the saved garden plan area -->
 <h2>My Garden Plan</h2>
 
+<!-- Explanation of what the garden plan section will contain -->
 <p>
 Saved plants and measurements for your garden layout will appear here.
 </p>
 
+<!-- Container where JavaScript will dynamically display saved plants -->
 <div id="gardenContainer">
 
+<!-- Placeholder message shown when no garden items are saved -->
 <p>No plants saved yet.</p>
 
+<!-- Ends the garden container -->
 </div>
 
+<!-- Ends the garden plan section -->
 </section>
 
+<!-- Ends the main content area -->
 </main>
 
 
+<!-- Footer containing simple project information -->
 <footer>
 
+<!-- Displays project attribution text -->
 <p>Garden Design Planner — WDD330 Final Project</p>
 
+<!-- Ends the footer -->
 </footer>
 
 
+<!-- Loads the main JavaScript module which controls page logic and interactions -->
 <script type="module" src="js/main.js"></script>
 
+<!-- Ends the body of the page -->
 </body>
 
+<!-- Ends the HTML document -->
 </html>
