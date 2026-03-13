@@ -122,7 +122,7 @@ if (window.location.pathname.includes("food.html")) {
             const card = document.createElement("div");
             card.classList.add("plantCard");
             card.innerHTML = `
-                <img src="${plant.image}" alt="${plant.name}" class="plantImg">
+                <img src="${plant.image || 'images/placeholder.jpg'}" alt="${plant.name}" class="plantImg">
                 <h3>${plant.name}</h3>
                 <p>Sun: ${plant.sun}</p>
                 <p>Water: ${plant.water}</p>
@@ -148,7 +148,7 @@ if (window.location.pathname.includes("flowers.html")) {
             const card = document.createElement("div");
             card.classList.add("plantCard");
             card.innerHTML = `
-                <img src="${plant.image}" alt="${plant.name}" class="plantImg">
+                <img src="${plant.image || 'images/placeholder.jpg'}" alt="${plant.name}" class="plantImg">
                 <h3>${plant.name}</h3>
                 <p>Sun: ${plant.sun}</p>
                 <p>Water: ${plant.water}</p>
