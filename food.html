@@ -76,11 +76,11 @@ not be placed near each other.
 <h2>Available Food Plants</h2>
 
 <!-- Container where plant cards will be inserted -->
-<div id="foodPlantContainer">
-
-<p>Loading plant data...</p>
-
-</div>
+<div id="plantContainer"></div>
+        <!-- Container where plant cards will be inserted -->
+        <div id="foodPlantContainer">
+            <p>Loading plant data...</p>
+        </div>
 
 </section>
 
@@ -115,8 +115,26 @@ not be placed near each other.
 <!-- Loads garden compatibility logic -->
 <script type="module" src="js/design.js"></script>
 
+
 <!-- Loads UI rendering logic -->
 <script type="module" src="js/ui.js"></script>
+
+<!-- Inline module to load and display food plants dynamically -->
+<script type="module">
+	import { loadFoodPlants } from './js/plants.js';
+	import { renderPlantList, showMessage } from './js/ui.js';
+
+	const container = document.getElementById('foodPlantContainer');
+	showMessage(container, 'Loading plant data...');
+
+	loadFoodPlants()
+		.then(plants => {
+			renderPlantList(plants, container);
+		})
+		.catch(() => {
+			showMessage(container, 'Failed to load plant data.');
+		});
+</script>
 
 </body>
 

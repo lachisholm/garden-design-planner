@@ -28,7 +28,7 @@ if (foodBtn) {
     foodBtn.addEventListener("click", () => {
 
         // Displays a simple message to the user when the button is clicked
-        alert("Food Garden section coming next.");
+        window.location.href = "food.html";
 
     });
 
@@ -42,7 +42,7 @@ if (flowerBtn) {
     flowerBtn.addEventListener("click", () => {
 
         // Shows a message to the user indicating the feature will be added soon
-        alert("Flower Garden section coming next.");
+        window.location.href = "flowers.html";
 
     });
 
@@ -56,7 +56,7 @@ if (fenceBtn) {
     fenceBtn.addEventListener("click", () => {
 
         // Displays a temporary placeholder message
-        alert("Fencing section coming next.");
+        window.location.href = "fencing.html";
 
     });
 
@@ -110,3 +110,15 @@ function displaySavedGarden() {
 
 // Calls the function that loads and displays any saved garden data when the page first loads
 displaySavedGarden();
+
+// Debug: Display each food plant name in the #plantContainer
+import { loadFoodPlants } from './plants.js';
+loadFoodPlants().then(plants => {
+    const container = document.getElementById("plantContainer");
+    plants.forEach(plant => {
+        const card = document.createElement("div");
+        card.className = "plantCard";
+        card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p>`;
+        container.appendChild(card);
+    });
+});

@@ -1,0 +1,73 @@
+<!-- Declares the document type so browsers render using modern HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fencing Options</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Garden Design Planner</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food Garden</a></li>
+        <li><a href="flowers.html">Flowers</a></li>
+        <li><a href="fencing.html">Fencing</a></li>
+        <li><a href="planner.html">My Garden Plan</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Garden Fencing Options</h2>
+      <p>
+        This section helps you choose the best fencing for your garden. Explore different materials, purposes, and maintenance needs.
+      </p>
+    </section>
+    <section class="features">
+      <h2>Available Fencing Types</h2>
+      <div id="fencingContainer">
+        <p>Loading fencing data...</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Garden Design Planner — WDD330 Final Project</p>
+  </footer>
+  <script type="module" src="js/plants.js"></script>
+  <script type="module" src="js/design.js"></script>
+  <script type="module" src="js/ui.js"></script>
+  <!-- Inline module to load and display fencing dynamically -->
+  <script type="module">
+    import { loadFencing } from './js/plants.js';
+    import { showMessage } from './js/ui.js';
+
+    const container = document.getElementById('fencingContainer');
+    showMessage(container, 'Loading fencing data...');
+
+    loadFencing()
+      .then(fences => {
+        container.innerHTML = '';
+        fences.forEach(fence => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <h3>${fence.name}</h3>
+            <p><strong>Material:</strong> ${fence.material}</p>
+            <p><strong>Purpose:</strong> ${fence.purpose}</p>
+            <p><strong>Height:</strong> ${fence.height}</p>
+            <p><strong>Best Use:</strong> ${fence.bestUse}</p>
+            <p><strong>Maintenance:</strong> ${fence.maintenance}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(() => {
+        showMessage(container, 'Failed to load fencing data.');
+      });
+  </script>
+</body>
+</html>
