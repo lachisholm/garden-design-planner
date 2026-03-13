@@ -151,3 +151,15 @@ if (window.location.pathname.includes("flowers.html")) {
         });
     });
 }
+
+if (window.location.pathname.includes("fencing.html")) {
+    loadFencing().then(items => {
+        const container = document.getElementById("fenceContainer");
+        items.forEach(item => {
+            const card = document.createElement("div");
+            card.classList.add("plantCard");
+            card.innerHTML = `<h3>${item.name}</h3><p>Material: ${item.material}</p><p>Height: ${item.height}</p>`;
+            container.appendChild(card);
+        });
+    });
+}
