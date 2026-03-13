@@ -298,6 +298,30 @@ box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 
+/* Styles the fence container */
+#fenceContainer {
+
+/* Adds spacing above container */
+margin-top: 20px;
+
+/* Adds padding inside container */
+padding: 22px;
+
+/* Background color */
+background: #ffffff;
+
+/* Rounded corners */
+border-radius: 8px;
+
+/* Ensures visible container height */
+min-height: 90px;
+
+/* Soft shadow */
+box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+}
+
+
 /* ================================================= */
 /* FOOTER                                            */
 /* ================================================= */

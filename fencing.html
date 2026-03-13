@@ -29,10 +29,8 @@
       </p>
     </section>
     <section class="features">
-      <h2>Available Fencing Types</h2>
-      <div id="fencingContainer">
-        <p>Loading fencing data...</p>
-      </div>
+      <h2>Available Fencing Options</h2>
+      <div id="fenceContainer"></div>
     </section>
   </main>
   <footer>
@@ -46,7 +44,7 @@
     import { loadFencing } from './js/plants.js';
     import { showMessage } from './js/ui.js';
 
-    const container = document.getElementById('fencingContainer');
+    const container = document.getElementById('fenceContainer');
     showMessage(container, 'Loading fencing data...');
 
     loadFencing()
