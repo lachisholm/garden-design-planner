@@ -321,3 +321,9 @@ background: #e5e7eb;
 font-size: 14px;
 
 }
+
+.plantCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}

@@ -98,7 +98,7 @@ function displaySavedGarden() {
         <strong>${plant.name}</strong>
         <p>Water: ${plant.water}</p>
         <p>Sun: ${plant.sun}</p>
-        `;
+        <button class="addPlantBtn">Add to Garden</button>`;
 
         // Appends the newly created plant card to the garden container on the page
         gardenContainer.appendChild(plantCard);
@@ -118,7 +118,7 @@ loadFoodPlants().then(plants => {
     plants.forEach(plant => {
         const card = document.createElement("div");
         card.className = "plantCard";
-        card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p>`;
+        card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p><button class="addPlantBtn">Add to Garden</button>`;
         container.appendChild(card);
     });
 });
