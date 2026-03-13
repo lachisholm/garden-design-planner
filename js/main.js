@@ -121,7 +121,10 @@ loadFoodPlants().then(plants => {
         card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p><button class="addPlantBtn">Add to Garden</button>`;
         const button = card.querySelector(".addPlantBtn");
         button.addEventListener("click", () => {
-            alert(plant.name + " added to your garden plan.");
+            let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
+            garden.push(plant);
+            localStorage.setItem("gardenPlan", JSON.stringify(garden));
+            displaySavedGarden();
         });
         container.appendChild(card);
     });
