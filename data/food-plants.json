@@ -4,34 +4,39 @@
     "water": "Medium",
     "sun": "Full Sun",
     "goodCompanions": ["Basil", "Carrot", "Onion"],
-    "avoid": ["Potato", "Corn"]
+    "avoid": ["Potato", "Corn"],
+    "image": "images/tomato.jpg"
   },
   {
     "name": "Basil",
     "water": "Low",
     "sun": "Full Sun",
     "goodCompanions": ["Tomato", "Pepper"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/basil.jpg"
   },
   {
     "name": "Carrot",
     "water": "Low",
     "sun": "Full Sun",
     "goodCompanions": ["Tomato", "Lettuce"],
-    "avoid": ["Dill"]
+    "avoid": ["Dill"],
+    "image": "images/carrot.jpg"
   },
   {
     "name": "Pepper",
     "water": "Medium",
     "sun": "Full Sun",
     "goodCompanions": ["Basil", "Tomato"],
-    "avoid": ["Fennel"]
+    "avoid": ["Fennel"],
+    "image": "images/pepper.jpg"
   },
   {
     "name": "Watermelon",
     "water": "High",
     "sun": "Full Sun",
     "goodCompanions": ["Radish", "Corn"],
-    "avoid": ["Potato"]
+    "avoid": ["Potato"],
+    "image": "images/watermelon.jpg"
   }
 ]

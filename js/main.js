@@ -95,10 +95,11 @@ function displaySavedGarden() {
 
         // Inserts plant data into the div using template literals
         plantCard.innerHTML = `
-        <strong>${plant.name}</strong>
-        <p>Water: ${plant.water}</p>
+        <img src="${plant.image}" alt="${plant.name}" class="plantImg">
+        <h3>${plant.name}</h3>
         <p>Sun: ${plant.sun}</p>
-        <p>Spacing: ${plant.spacing}</p>
+        <p>Water: ${plant.water}</p>
+        <p>Spacing: ${plant.spacing || ''}</p>
         <button class="addPlantBtn">Add to Garden</button>`;
 
         // Appends the newly created plant card to the garden container on the page
@@ -120,7 +121,14 @@ if (window.location.pathname.includes("food.html")) {
         plants.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
-            card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p><p>Spacing: ${plant.spacing}</p><button class="addPlantBtn">Add to Garden</button>`;
+            card.innerHTML = `
+                <img src="${plant.image}" alt="${plant.name}" class="plantImg">
+                <h3>${plant.name}</h3>
+                <p>Sun: ${plant.sun}</p>
+                <p>Water: ${plant.water}</p>
+                <p>Spacing: ${plant.spacing || ''}</p>
+                <button class="addPlantBtn">Add to Garden</button>
+            `;
             const button = card.querySelector(".addPlantBtn");
             button.addEventListener("click", () => {
                 let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
@@ -139,7 +147,12 @@ if (window.location.pathname.includes("flowers.html")) {
         plants.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
-            card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p><button class="addPlantBtn">Add to Garden</button>`;
+            card.innerHTML = `
+                <img src="${plant.image}" alt="${plant.name}" class="plantImg">
+                <h3>${plant.name}</h3>
+                <p>Sun: ${plant.sun}</p>
+                <p>Water: ${plant.water}</p>
+                <button class="addPlantBtn">Add to Garden</button>`;
             const button = card.querySelector(".addPlantBtn");
             button.addEventListener("click", () => {
                 let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];

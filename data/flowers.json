@@ -5,7 +5,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Lavender", "Marigold"],
-    "avoid": ["Mint"]
+    "avoid": ["Mint"],
+    "image": "images/rose.jpg"
   },
   {
     "name": "Lavender",
@@ -13,7 +14,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Rose", "Daisy"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/lavender.jpg"
   },
   {
     "name": "Marigold",
@@ -21,7 +23,8 @@
     "sun": "Full Sun",
     "type": "Annual",
     "goodCompanions": ["Rose", "Petunia"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/marigold.jpg"
   },
   {
     "name": "Tulip",
@@ -29,7 +32,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Daffodil"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/tulip.jpg"
   },
   {
     "name": "Daffodil",
@@ -37,7 +41,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Tulip"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/daffodil.jpg"
   },
   {
     "name": "Daisy",
@@ -45,7 +50,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Lavender", "Coneflower"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/daisy.jpg"
   },
   {
     "name": "Petunia",
@@ -53,7 +59,8 @@
     "sun": "Full Sun",
     "type": "Annual",
     "goodCompanions": ["Marigold", "Geranium"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/petunia.jpg"
   },
   {
     "name": "Geranium",
@@ -61,7 +68,8 @@
     "sun": "Partial Sun",
     "type": "Perennial",
     "goodCompanions": ["Petunia"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/geranium.jpg"
   },
   {
     "name": "Sunflower",
@@ -69,7 +77,8 @@
     "sun": "Full Sun",
     "type": "Annual",
     "goodCompanions": ["Zinnia", "Cosmos"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/sunflower.jpg"
   },
   {
     "name": "Zinnia",
@@ -77,7 +86,8 @@
     "sun": "Full Sun",
     "type": "Annual",
     "goodCompanions": ["Sunflower"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/zinnia.jpg"
   },
   {
     "name": "Cosmos",
@@ -85,7 +95,8 @@
     "sun": "Full Sun",
     "type": "Annual",
     "goodCompanions": ["Sunflower"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/cosmos.jpg"
   },
   {
     "name": "Coneflower",
@@ -93,7 +104,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Daisy"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/coneflower.jpg"
   },
   {
     "name": "Hydrangea",
@@ -101,7 +113,8 @@
     "sun": "Partial Sun",
     "type": "Perennial",
     "goodCompanions": ["Hosta"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/hydrangea.jpg"
   },
   {
     "name": "Hosta",
@@ -109,7 +122,8 @@
     "sun": "Shade",
     "type": "Perennial",
     "goodCompanions": ["Hydrangea"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/hosta.jpg"
   },
   {
     "name": "Begonia",
@@ -117,7 +131,8 @@
     "sun": "Partial Sun",
     "type": "Annual",
     "goodCompanions": ["Impatiens"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/begonia.jpg"
   },
   {
     "name": "Impatiens",
@@ -125,7 +140,8 @@
     "sun": "Shade",
     "type": "Annual",
     "goodCompanions": ["Begonia"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/impatiens.jpg"
   },
   {
     "name": "Chrysanthemum",
@@ -133,7 +149,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Aster"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/chrysanthemum.jpg"
   },
   {
     "name": "Aster",
@@ -141,7 +158,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Chrysanthemum"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/aster.jpg"
   },
   {
     "name": "Peony",
@@ -149,7 +167,8 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Iris"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/peony.jpg"
   },
   {
     "name": "Iris",
@@ -157,6 +176,7 @@
     "sun": "Full Sun",
     "type": "Perennial",
     "goodCompanions": ["Peony"],
-    "avoid": []
+    "avoid": [],
+    "image": "images/iris.jpg"
   }
 ]
