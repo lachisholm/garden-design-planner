@@ -119,6 +119,10 @@ loadFoodPlants().then(plants => {
         const card = document.createElement("div");
         card.className = "plantCard";
         card.innerHTML = `<h3>${plant.name}</h3><p>Sun: ${plant.sun}</p><p>Water: ${plant.water}</p><button class="addPlantBtn">Add to Garden</button>`;
+        const button = card.querySelector(".addPlantBtn");
+        button.addEventListener("click", () => {
+            alert(plant.name + " added to your garden plan.");
+        });
         container.appendChild(card);
     });
 });
