@@ -93,9 +93,6 @@ for beauty and health, watering requirements, and garden layout ideas.
 
 <!-- Container where flower cards will be inserted by JavaScript -->
 <div id="plantContainer"></div>
-<div id="flowerContainer">
-    <p>Loading flower data...</p>
-</div>
 
 <!-- End feature section -->
 </section>
@@ -148,7 +145,7 @@ for beauty and health, watering requirements, and garden layout ideas.
 	import { loadFlowers } from './js/plants.js';
 	import { renderPlantList, showMessage } from './js/ui.js';
 
-	const container = document.getElementById('flowerContainer');
+	const container = document.getElementById('plantContainer');
 	showMessage(container, 'Loading flower data...');
 
 	loadFlowers()
