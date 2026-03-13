@@ -101,6 +101,13 @@ function displaySavedGarden() {
         <button class="removePlantBtn">Remove</button>`;
 
         // Appends the newly created plant card to the garden container on the page
+        const removeBtn = plantCard.querySelector(".removePlantBtn");
+        removeBtn.addEventListener("click", () => {
+            let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
+            garden = garden.filter(p => p.name !== plant.name);
+            localStorage.setItem("gardenPlan", JSON.stringify(garden));
+            displaySavedGarden();
+        });
         plantCard.classList.add("plantCard");
         gardenContainer.appendChild(plantCard);
 
