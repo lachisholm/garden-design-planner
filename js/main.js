@@ -95,12 +95,10 @@ function displaySavedGarden() {
 
         // Inserts plant data into the div using template literals
         plantCard.innerHTML = `
-        <img src="${plant.image}" alt="${plant.name}" class="plantImg">
-        <h3>${plant.name}</h3>
-        <p>Sun: ${plant.sun}</p>
+        <strong>${plant.name}</strong>
         <p>Water: ${plant.water}</p>
-        <p>Spacing: ${plant.spacing || ''}</p>
-        <button class="addPlantBtn">Add to Garden</button>`;
+        <p>Sun: ${plant.sun}</p>
+        <button class="removePlantBtn">Remove</button>`;
 
         // Appends the newly created plant card to the garden container on the page
         plantCard.classList.add("plantCard");
@@ -127,8 +125,7 @@ if (window.location.pathname.includes("food.html")) {
                 <p>Sun: ${plant.sun}</p>
                 <p>Water: ${plant.water}</p>
                 <p>Spacing: ${plant.spacing || ''}</p>
-                <button class="addPlantBtn">Add to Garden</button>
-            `;
+                <button class="addPlantBtn">Add to Garden</button>`;
             const button = card.querySelector(".addPlantBtn");
             button.addEventListener("click", () => {
                 let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
