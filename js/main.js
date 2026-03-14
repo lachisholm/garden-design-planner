@@ -119,11 +119,13 @@ function displaySavedGarden() {
 // Calls the function that loads and displays any saved garden data when the page first loads
 displaySavedGarden();
 
-// Debug: Display each food plant name in the #plantContainer
-if (window.location.pathname.includes("food.html")) {
+// Retrieves the container element where plant cards will be displayed
+const plantContainer = document.getElementById("plantContainer");
+
+// Loads and displays food plants if on food.html
+if (window.location.pathname.includes("food.html") && plantContainer) {
     loadFoodPlants().then(plants => {
-        const container = document.getElementById("plantContainer");
-        container.innerHTML = "";
+        plantContainer.innerHTML = "";
         plants.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
@@ -141,15 +143,15 @@ if (window.location.pathname.includes("food.html")) {
                 localStorage.setItem("gardenPlan", JSON.stringify(garden));
                 displaySavedGarden();
             });
-            container.appendChild(card);
+            plantContainer.appendChild(card);
         });
     });
 }
 
-if (window.location.pathname.includes("flowers.html")) {
+// Loads and displays flower plants if on flowers.html
+if (window.location.pathname.includes("flowers.html") && plantContainer) {
     loadFlowers().then(plants => {
-        const container = document.getElementById("plantContainer");
-        container.innerHTML = "";
+        plantContainer.innerHTML = "";
         plants.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
@@ -166,7 +168,7 @@ if (window.location.pathname.includes("flowers.html")) {
                 localStorage.setItem("gardenPlan", JSON.stringify(garden));
                 displaySavedGarden();
             });
-            container.appendChild(card);
+            plantContainer.appendChild(card);
         });
     });
 }
