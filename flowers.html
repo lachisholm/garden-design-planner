@@ -140,23 +140,6 @@ for beauty and health, watering requirements, and garden layout ideas.
 
 <script type="module" src="js/ui.js"></script>
 
-<!-- Inline module to load and display flowers dynamically -->
-<script type="module">
-	import { loadFlowers } from './js/plants.js';
-	import { renderPlantList, showMessage } from './js/ui.js';
-
-	const container = document.getElementById('plantContainer');
-	showMessage(container, 'Loading flower data...');
-
-	loadFlowers()
-		.then(flowers => {
-			renderPlantList(flowers, container);
-		})
-		.catch(() => {
-			showMessage(container, 'Failed to load flower data.');
-		});
-</script>
-
 <!-- End body -->
 </body>
 
