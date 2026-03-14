@@ -6,15 +6,15 @@
 
 
 // Defines the file path for the food plants dataset located in the data folder
-const FOOD_PLANT_DATA_PATH = "./data/food-plants.json";
+const FOOD_PLANT_DATA_PATH = "data/food-plants.json";
 
 
 // Defines the file path for the flowers dataset located in the data folder
-const FLOWER_DATA_PATH = "./data/flowers.json";
+const FLOWER_DATA_PATH = "data/flowers.json";
 
 
 // Defines the file path for the fencing dataset located in the data folder
-const FENCING_DATA_PATH = "./data/fencing.json";
+const FENCING_DATA_PATH = "data/fencing.json";
 
 
 // Defines an asynchronous function that loads food plant data from the local JSON file
