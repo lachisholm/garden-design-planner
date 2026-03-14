@@ -123,6 +123,7 @@ displaySavedGarden();
 if (window.location.pathname.includes("food.html")) {
     loadFoodPlants().then(plants => {
         const container = document.getElementById("plantContainer");
+        container.innerHTML = "";
         plants.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
@@ -148,6 +149,7 @@ if (window.location.pathname.includes("food.html")) {
 if (window.location.pathname.includes("flowers.html")) {
     loadFlowers().then(plants => {
         const container = document.getElementById("plantContainer");
+        container.innerHTML = "";
         plants.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
