@@ -7,6 +7,9 @@
 
 
 
+// Imports plant data loader functions from the plants module
+import { loadFoodPlants, loadFlowers } from './plants.js';
+
 // Writes a message to the browser console confirming the script loaded
 console.log("Garden Design Planner Loaded");
 
@@ -180,14 +183,3 @@ if (window.location.pathname.includes("flowers.html") && plantContainer) {
     });
 }
 
-if (window.location.pathname.includes("fencing.html")) {
-    loadFencing().then(items => {
-        const container = document.getElementById("fenceContainer");
-        items.forEach(item => {
-            const card = document.createElement("div");
-            card.classList.add("plantCard");
-            card.innerHTML = `<h3>${item.name}</h3><p>Material: ${item.material}</p><p>Height: ${item.height}</p>`;
-            container.appendChild(card);
-        });
-    });
-}
