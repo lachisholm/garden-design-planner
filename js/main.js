@@ -154,30 +154,7 @@ if (window.location.pathname.includes("food.html") && plantContainer) {
 
 // Loads and displays flower plants if on flowers.html
 if (window.location.pathname.includes("flowers.html") && plantContainer) {
-    loadFlowers().then(data => {
-        console.log("Flowers loaded:", data);
-        const container = document.getElementById("plantContainer");
-        console.log("Container:", container);
-        container.innerHTML = "";
-        data.forEach(plant => {
-            const card = document.createElement("div");
-            card.classList.add("plantCard");
-            card.innerHTML = `
-                <img src="${plant.image || 'images/placeholder.jpg'}" alt="${plant.name}" class="plantImg">
-                <h3>${plant.name}</h3>
-                <p>Sun: ${plant.sun}</p>
-                <p>Water: ${plant.water}</p>
-                <button class="addPlantBtn">Add to Garden</button>`;
-            const button = card.querySelector(".addPlantBtn");
-            button.addEventListener("click", () => {
-                let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
-                garden.push(plant);
-                localStorage.setItem("gardenPlan", JSON.stringify(garden));
-                displaySavedGarden();
-            });
-            container.appendChild(card);
-        });
-    });
+    loadFlowers();
 }
 
 if (window.location.pathname.includes("fencing.html")) {
