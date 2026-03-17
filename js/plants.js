@@ -33,17 +33,30 @@ export async function loadFoodPlants() {
 
 
 // Defines an asynchronous function that loads flower data from the local JSON file
+
+
+
+
 export async function loadFlowers() {
-
-    // Sends a request to retrieve the flower dataset
-    const response = await fetch(FLOWER_DATA_PATH);
-
-    // Converts the JSON file into a JavaScript object
+    const response = await fetch("./data/flowers.json");
     const data = await response.json();
 
-    // Returns the flower dataset
-    return data;
+    const container = document.getElementById("plantContainer");
+    if (!container) return;
 
+    container.innerHTML = "";
+
+    data.forEach(plant => {
+        const card = document.createElement("div");
+
+        card.innerHTML = `
+            <h3>${plant.name}</h3>
+            <p>${plant.description}</p>
+            <button>Add to Garden</button>
+        `;
+
+        container.appendChild(card);
+    });
 }
 
 
