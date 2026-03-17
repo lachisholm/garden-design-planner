@@ -7,6 +7,9 @@
 
 
 
+// Imports plant data loading functions from the plants module
+import { loadFoodPlants, loadFlowers, loadFencing } from './plants.js';
+
 // Writes a message to the browser console confirming the script loaded
 console.log("Garden Design Planner Loaded");
 
