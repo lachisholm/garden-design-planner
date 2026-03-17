@@ -3,7 +3,8 @@
 // Controls page interactions and starting the application
 //==============================================
 
-
+// Imports plant-loading functions from the plants module so they can be called on each page
+import { loadFoodPlants, loadFlowers, loadFencing } from './plants.js';
 
 
 
@@ -180,14 +181,3 @@ if (window.location.pathname.includes("flowers.html") && plantContainer) {
     });
 }
 
-if (window.location.pathname.includes("fencing.html")) {
-    loadFencing().then(items => {
-        const container = document.getElementById("fenceContainer");
-        items.forEach(item => {
-            const card = document.createElement("div");
-            card.classList.add("plantCard");
-            card.innerHTML = `<h3>${item.name}</h3><p>Material: ${item.material}</p><p>Height: ${item.height}</p>`;
-            container.appendChild(card);
-        });
-    });
-}
