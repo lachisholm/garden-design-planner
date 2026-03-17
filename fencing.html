@@ -36,37 +36,5 @@
   <footer>
     <p>Garden Design Planner — WDD330 Final Project</p>
   </footer>
-  <script type="module" src="js/plants.js"></script>
-  <script type="module" src="js/design.js"></script>
-  <script type="module" src="js/ui.js"></script>
-  <!-- Inline module to load and display fencing dynamically -->
-  <script type="module">
-    import { loadFencing } from './js/plants.js';
-    import { showMessage } from './js/ui.js';
-
-    const container = document.getElementById('fenceContainer');
-    showMessage(container, 'Loading fencing data...');
-
-    loadFencing()
-      .then(fences => {
-        container.innerHTML = '';
-        fences.forEach(fence => {
-          const card = document.createElement('div');
-          card.className = 'card';
-          card.innerHTML = `
-            <h3>${fence.name}</h3>
-            <p><strong>Material:</strong> ${fence.material}</p>
-            <p><strong>Purpose:</strong> ${fence.purpose}</p>
-            <p><strong>Height:</strong> ${fence.height}</p>
-            <p><strong>Best Use:</strong> ${fence.bestUse}</p>
-            <p><strong>Maintenance:</strong> ${fence.maintenance}</p>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(() => {
-        showMessage(container, 'Failed to load fencing data.');
-      });
-  </script>
 </body>
 </html>

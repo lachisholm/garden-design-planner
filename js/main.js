@@ -3,8 +3,8 @@
 // Controls page interactions and starting the application
 //==============================================
 
-
-
+// Imports data-loading functions from the plants module
+import { loadFoodPlants, loadFlowers, loadFencing } from './plants.js';
 
 
 // Writes a message to the browser console confirming the script loaded
@@ -100,8 +100,9 @@ function displaySavedGarden() {
         // Inserts plant data into the div using template literals
         plantCard.innerHTML = `
         <strong>${plant.name}</strong>
-        <p>Water: ${plant.water}</p>
-        <p>Sun: ${plant.sun}</p>
+        ${plant.water ? `<p>Water: ${plant.water}</p>` : ''}
+        ${plant.sun ? `<p>Sun: ${plant.sun}</p>` : ''}
+        ${plant.material ? `<p>Material: ${plant.material}</p>` : ''}
         <button class="removePlantBtn">Remove</button>`;
 
         // Appends the newly created plant card to the garden container on the page
@@ -145,6 +146,8 @@ if (window.location.pathname.includes("food.html") && plantContainer) {
                 let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
                 garden.push(plant);
                 localStorage.setItem("gardenPlan", JSON.stringify(garden));
+                button.textContent = "Added!";
+                setTimeout(() => { button.textContent = "Add to Garden"; }, 1500);
                 displaySavedGarden();
             });
             plantContainer.appendChild(card);
@@ -155,9 +158,7 @@ if (window.location.pathname.includes("food.html") && plantContainer) {
 // Loads and displays flower plants if on flowers.html
 if (window.location.pathname.includes("flowers.html") && plantContainer) {
     loadFlowers().then(data => {
-        console.log("Flowers loaded:", data);
         const container = document.getElementById("plantContainer");
-        console.log("Container:", container);
         container.innerHTML = "";
         data.forEach(plant => {
             const card = document.createElement("div");
@@ -173,6 +174,8 @@ if (window.location.pathname.includes("flowers.html") && plantContainer) {
                 let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
                 garden.push(plant);
                 localStorage.setItem("gardenPlan", JSON.stringify(garden));
+                button.textContent = "Added!";
+                setTimeout(() => { button.textContent = "Add to Garden"; }, 1500);
                 displaySavedGarden();
             });
             container.appendChild(card);
@@ -183,10 +186,27 @@ if (window.location.pathname.includes("flowers.html") && plantContainer) {
 if (window.location.pathname.includes("fencing.html")) {
     loadFencing().then(items => {
         const container = document.getElementById("fenceContainer");
+        if (!container) return;
+        container.innerHTML = "";
         items.forEach(item => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
-            card.innerHTML = `<h3>${item.name}</h3><p>Material: ${item.material}</p><p>Height: ${item.height}</p>`;
+            card.innerHTML = `
+                <h3>${item.name}</h3>
+                <p><strong>Material:</strong> ${item.material}</p>
+                <p><strong>Purpose:</strong> ${item.purpose}</p>
+                <p><strong>Height:</strong> ${item.height}</p>
+                <p><strong>Best Use:</strong> ${item.bestUse}</p>
+                <p><strong>Maintenance:</strong> ${item.maintenance}</p>
+                <button class="addPlantBtn">Add to Plan</button>`;
+            const button = card.querySelector(".addPlantBtn");
+            button.addEventListener("click", () => {
+                let garden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
+                garden.push(item);
+                localStorage.setItem("gardenPlan", JSON.stringify(garden));
+                button.textContent = "Added!";
+                setTimeout(() => { button.textContent = "Add to Plan"; }, 1500);
+            });
             container.appendChild(card);
         });
     });
