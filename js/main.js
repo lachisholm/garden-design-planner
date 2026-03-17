@@ -152,9 +152,12 @@ if (window.location.pathname.includes("food.html") && plantContainer) {
 
 // Loads and displays flower plants if on flowers.html
 if (window.location.pathname.includes("flowers.html") && plantContainer) {
-    loadFlowers().then(plants => {
-        plantContainer.innerHTML = "";
-        plants.forEach(plant => {
+    loadFlowers().then(data => {
+        console.log("Flowers loaded:", data);
+        const container = document.getElementById("plantContainer");
+        console.log("Container:", container);
+        container.innerHTML = "";
+        data.forEach(plant => {
             const card = document.createElement("div");
             card.classList.add("plantCard");
             card.innerHTML = `
@@ -170,7 +173,7 @@ if (window.location.pathname.includes("flowers.html") && plantContainer) {
                 localStorage.setItem("gardenPlan", JSON.stringify(garden));
                 displaySavedGarden();
             });
-            plantContainer.appendChild(card);
+            container.appendChild(card);
         });
     });
 }
