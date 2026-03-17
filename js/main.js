@@ -70,6 +70,8 @@ const gardenContainer = document.getElementById("gardenContainer");
 // Defines a function responsible for displaying saved garden items from localStorage
 function displaySavedGarden() {
 
+    const gardenContainer = document.getElementById("gardenContainer");
+    if (!gardenContainer) return;
     // Retrieves the saved garden plan from browser localStorage and converts it from JSON text into an object
     const savedGarden = JSON.parse(localStorage.getItem("gardenPlan")) || [];
 
