@@ -65,7 +65,9 @@ if (fenceBtn) {
 
 // Retrieves the container element where saved garden plants will be displayed
 const gardenContainer = document.getElementById("gardenContainer");
-
+if (gardenContainer) {
+    displaySavedGarden();
+}
 
 // Defines a function responsible for displaying saved garden items from localStorage
 function displaySavedGarden() {
